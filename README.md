@@ -11,14 +11,14 @@ Medidor de fluxo de água usando ESPHome
 
 A leitura da informação enviada pelo sensor é feita usando-se um pulse_counter no ESPHome. [1]
 
-sensor:
-  - platform: pulse_counter
-    pin: GPIO5
-    name: "Pulse Counter"
-    update_interval: 5s
-    filters:
-    - lambda: return (x / 27.0) * 60.0;
-    unit_of_measurement: "L/hr"  
+    sensor:
+      - platform: pulse_counter
+        pin: GPIO5
+        name: "Pulse Counter"
+        update_interval: 5s
+        filters:
+        - lambda: return (x / 27.0) * 60.0;
+        unit_of_measurement: "L/hr"  
 
 
 
