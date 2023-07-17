@@ -3,13 +3,13 @@ Medidor de fluxo de água usando ESPHome
 
 ## Lista de materiais
 
-- Weemos D1 mini v3 (https://pt.aliexpress.com/item/32831353752.html?spm=a2g0o.order_list.order_list_main.58.66c0caa4Gt99Q5&gatewayAdapt=glo2bra)
+- Weemos D1 mini v3 (https://pt.aliexpress.com/item/32831353752.html?spm=a2g0o.order_list.order_list_main.58.66c0caa4Gt99Q5&gatewayAdapt=glo2bra) [3]
 - medidor de fluxo de água com sensor de temperatura (https://pt.aliexpress.com/item/1005001982191762.html?spm=a2g0o.order_list.order_list_main.41.66c0caa4Gt99Q5&gatewayAdapt=glo2bra)
 - fonte 5V 1A
 - cabo usb - micro USB
 
 
-A leitura da informação enviada pelo sensor é feita usando-se um pulse_counter no ESPHome. [1]
+A leitura da informação enviada pelo sensor é feita usando-se um pulse_counter no ESPHome. [1] [2]
 
     sensor:
       - platform: pulse_counter
@@ -25,4 +25,9 @@ A leitura da informação enviada pelo sensor é feita usando-se um pulse_counte
 ## Referências:
 
 [1] https://community.home-assistant.io/t/using-esphome-to-build-a-water-flow-rate-meter/119380/4
+
+[2] Pulse counter sensor: https://esphome.io/components/sensor/pulse_counter.html?highlight=pulse
+
+[3] Pinagem do Wemos D1 mini: https://i2.wp.com/www.teachmemicro.com/wp-content/uploads/2019/07/wemos-d1-mini-pinout.jpg?ssl=1
+
 
