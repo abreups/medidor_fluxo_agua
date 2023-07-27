@@ -8,6 +8,7 @@ Medidor de fluxo de água usando ESPHome
 - fonte 5V 1A
 - cabo usb - micro USB
 
+## Medindo o fluxo da água
 
 A leitura da informação enviada pelo sensor é feita usando-se um pulse_counter no ESPHome. [1] [2]
   
@@ -32,6 +33,8 @@ do tipo "litros por minuto").
         filters:
         - lambda: return (x / 27.0) * 60.0;
         unit_of_measurement: "L/hr"
+
+## Medindo a temperatura da água
 
 
 ## Referências:
