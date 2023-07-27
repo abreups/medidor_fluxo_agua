@@ -38,8 +38,11 @@ do tipo "litros por minuto").
 
 O sensor de temperatura é do tipo NTC, ou seja, sua resistência varia com a temperatura (quanto maior a temperatura, menor a resistência).
 
-O vendedor (página do Ali Express) não dá detalhes sobre a curva de resposta do sensor então levantamos a curva na base da experimentação (meça a resistência à medida que varia a temperatura à qual o sensor é exposto). O resultado obtido foi o seguinte:
+O vendedor (página do Ali Express) não dá detalhes sobre a curva de resposta do sensor então levantamos a curva na base da experimentação (meça a resistência à medida que varia a temperatura à qual o sensor é exposto). O resultado obtido foi o seguinte (temperatura em graus Celsius e resistência em Kilo Ohms):
 
+![Tabela com dados da curva do termistor](tabela_curva_termistor.png)
+
+![Gráfico com os dados](curva_termistor.png)
 
 Para usar um NTC com o Wemos D1 mini precisamos montar um divisor de tensão [4].
 
