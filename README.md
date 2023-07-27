@@ -36,6 +36,14 @@ do tipo "litros por minuto").
 
 ## Medindo a temperatura da água
 
+O sensor de temperatura é do tipo NTC, ou seja, sua resistência varia com a temperatura (quanto maior a temperatura, menor a resistência).
+
+O vendedor (página do Ali Express) não dá detalhes sobre a curva de resposta do sensor então levantamos a curva na base da experimentação (meça a resistência à medida que varia a temperatura à qual o sensor é exposto). O resultado obtido foi o seguinte:
+
+
+Para usar um NTC com o Wemos D1 mini precisamos montar um divisor de tensão [4].
+
+
 
 ## Referências:
 
