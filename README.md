@@ -42,4 +42,7 @@ do tipo "litros por minuto").
 
 [3] Pinagem do Wemos D1 mini: https://i2.wp.com/www.teachmemicro.com/wp-content/uploads/2019/07/wemos-d1-mini-pinout.jpg?ssl=1
 
+[4] Circuito divisor de tensão: https://www.petervis.com/electronics%20guides/calculators/thermistor/thermistor.html
+
+
 
