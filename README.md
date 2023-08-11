@@ -34,6 +34,7 @@ do tipo "litros por minuto").
         - lambda: return (x / 27.0) * 60.0;
         unit_of_measurement: "L/hr"
 
+
 ## Medindo a temperatura da água
 
 O sensor de temperatura é do tipo NTC, ou seja, sua resistência varia com a temperatura (quanto maior a temperatura, menor a resistência).
