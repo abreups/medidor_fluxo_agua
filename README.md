@@ -47,6 +47,9 @@ O vendedor (página do Ali Express) não dá detalhes sobre a curva de resposta 
 
 Para usar um NTC com o Wemos D1 mini precisamos montar um divisor de tensão [4].
 
+![Divisor de tensão](divisor_de_tensao.png)
+
+
 
 
 ## Referências:
