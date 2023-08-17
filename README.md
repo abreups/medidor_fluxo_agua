@@ -45,9 +45,14 @@ O vendedor (página do Ali Express) não dá detalhes sobre a curva de resposta 
 
 ![Gráfico com os dados](curva_termistor.png)
 
+A temperatura da água do chuveiro vai ficar entre os 35 graus e os 45 graus, então
+a resistência do termistor deve ficar entre aproximadamente 17 Kilo Ohms e 13 Kilo Ohms.
+
+Vamos então usar um resistor de 10Kilo Ohms e ver no que dá.
+
 Para usar um NTC com o Wemos D1 mini precisamos montar um divisor de tensão [4].
 
-![Divisor de tensão](divisor_de_tensao.png)
+![Divisor de tensão](divisor_de_tensao2.png)
 
 
 
