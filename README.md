@@ -76,6 +76,20 @@ e adicionando no Home Assistant, já temos o seguinte resultado (o termistor est
 aquecedor e eu estava soprando no tubo do cano pra ter alguma contagem de pulsos):
 
 ![Sensores do Wemos D1 Mini no dashboard do Home Assistant](sensores_no_dashboard_1.png)
+
+Note que nesse ponto já temos como medir o fluxo de água e a temperatura da água.
+Por exemplo, afastando o termistor do aquecedor (e deixando estabilizar a temperatura) e
+não assoprando no cano, temos outras medidas no dashboard do Home assistant:
+
+![Sensores com medidas diferentes para fluxo de água e temperatura](sensores_no_dashboard_2.png)
+
+Obviamente que saber a tensão e a contagem de pulsos não ajuda muito pra saber quantos 
+litros de água estão sendo consumidos nem qual é a temperatura, mas eventualmente isso já serviria
+para uma automação simples que precisa saber se tem água passando no cano e se a temperatura está
+acima ou abaixo de um certo valor (você precisa apenas colocar o termistor num copo com 
+água que está a uma temperatura conhecida e anotar o valor da tensão para aquela situação).
+
+
 ## Referências:
 
 [1] https://community.home-assistant.io/t/using-esphome-to-build-a-water-flow-rate-meter/119380/4
