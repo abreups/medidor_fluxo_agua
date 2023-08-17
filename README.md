@@ -71,11 +71,11 @@ Nesse ponto podemos escrever o seguinte código para esses 2 sensores:
         name: "sensor tensão chuveiro1"
         update_interval: 15s
 
-Carregando esse código no D1 Wemos, conectando todos os cabos de energia e sensores
-e adicionando no Home Assistant, já temos o seguinte resultado (o termistor está perto de uma
-fonte de calor - um aquecedor - e eu estava soprando no tudo do cano pra ter alguma contagem de pulsos):
+Carregando esse código (mais o código padrão gerado pelo ESP Home com Wi-Fi, etc) no Wemos D1 Mini, conectando todos os cabos de energia e sensores
+e adicionando no Home Assistant, já temos o seguinte resultado (o termistor estava perto de um
+aquecedor e eu estava soprando no tubo do cano pra ter alguma contagem de pulsos):
 
-
+![Sensores do Wemos D1 Mini no dashboard do Home Assistant](sensores_no_dashboard_1.png)
 ## Referências:
 
 [1] https://community.home-assistant.io/t/using-esphome-to-build-a-water-flow-rate-meter/119380/4
