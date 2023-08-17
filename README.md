@@ -45,16 +45,35 @@ O vendedor (página do Ali Express) não dá detalhes sobre a curva de resposta 
 
 ![Gráfico com os dados](curva_termistor.png)
 
+Para usar um NTC com o Wemos D1 mini precisamos montar um divisor de tensão [4].
+
 A temperatura da água do chuveiro vai ficar entre os 35 graus e os 45 graus, então
 a resistência do termistor deve ficar entre aproximadamente 17 Kilo Ohms e 13 Kilo Ohms.
 
-Vamos então usar um resistor de 10Kilo Ohms e ver no que dá.
-
-Para usar um NTC com o Wemos D1 mini precisamos montar um divisor de tensão [4].
+Vamos então usar um resistor de 10 Kilo Ohms e ver no que dá.
 
 ![Divisor de tensão](divisor_de_tensao2.png)
 
+Essa configuração onde o termistor fica ligado no Vcc é denominada de UPSTREAM na documentação do 
+Resistance Sensor do ESP Home.
 
+Nesse ponto podemos escrever o seguinte código para esses 2 sensores:
+
+    sensor:
+      - platform: pulse_counter
+        # GPIO5 = D1
+        pin: GPIO5
+        name: "fluxo de agua"
+        update_interval: 5s
+    
+      - platform: adc
+        pin: A0
+        name: "sensor tensão chuveiro1"
+        update_interval: 15s
+
+Carregando esse código no D1 Wemos, conectando todos os cabos de energia e sensores
+e adicionando no Home Assistant, já temos o seguinte resultado (o termistor está perto de uma
+fonte de calor - um aquecedor - e eu estava soprando no tudo do cano pra ter alguma contagem de pulsos):
 
 
 ## Referências:
