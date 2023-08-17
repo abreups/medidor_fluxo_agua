@@ -23,18 +23,6 @@ No código acima criamos um `sensor` chamado "fluxo de água" que vai indicar
 a quantidade de pulsos do sensor (ainda não convertidos para uma métrica
 do tipo "litros por minuto").
 
-
-    sensor:
-      - platform: pulse_counter
-        # GPIO5 = D1
-        pin: GPIO5
-        name: "fluxo de agua"
-        update_interval: 5s
-        filters:
-        - lambda: return (x / 27.0) * 60.0;
-        unit_of_measurement: "L/hr"
-
-
 ## Medindo a temperatura da água
 
 O sensor de temperatura é do tipo NTC, ou seja, sua resistência varia com a temperatura (quanto maior a temperatura, menor a resistência).
@@ -89,6 +77,23 @@ para uma automação simples que precisa saber se tem água passando no cano e s
 acima ou abaixo de um certo valor (você precisa apenas colocar o termistor num copo com 
 água que está a uma temperatura conhecida e anotar o valor da tensão para aquela situação).
 
+## Convertendo valores
+
+
+
+    sensor:
+      - platform: pulse_counter
+        # GPIO5 = D1
+        pin: GPIO5
+        name: "fluxo de agua"
+        update_interval: 5s
+        filters:
+        - lambda: return (x / 27.0) * 60.0;
+        unit_of_measurement: "L/hr"
+
+
+
+## Calibrando as conversões
 
 ## Referências:
 
