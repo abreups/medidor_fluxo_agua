@@ -79,17 +79,48 @@ acima ou abaixo de um certo valor (você precisa apenas colocar o termistor num 
 
 ## Convertendo valores
 
+Primeiro medimos a vazão com um balde e um cronômetro.
+Montamos a tabela de dados coletados e convertemos tudo para litros por minuto.
 
+--- colocar tabela ---
+
+Ajustamos o código com os dados da calibragem (cuidado com a indentação do código na parte calibrate_linear, pois é só 1 espaço!):
+
+
+
+    sensor:
+      # https://esphome.io/components/sensor/pulse_counter.html
+      - platform: pulse_counter
+        # GPIO5 = D1 no Wemos D1 mini
+        pin: GPIO5
+        unit_of_measurement: 'litros/min'
+        accuracy_decimals: 0
+        name: "fluxo de agua"
+        update_interval: 15s
+        filters: # usado para converter os pulsos/min em litros/min
+          - calibrate_linear:
+             method: least_squares # opcional e default
+             datapoints:
+              # map xx do sensor para -> yy valor real
+              # valores medidos na pratica com balde e cronometro
+              - 0 -> 0
+              - 5364 -> 9.6
+              - 7360 -> 12.2
+              - 9570 -> 16.56
+
+
+Alternativa usando lambda (não testei):
 
     sensor:
       - platform: pulse_counter
         # GPIO5 = D1
         pin: GPIO5
+        unit_of_measurement: 'litros/min'
         name: "fluxo de agua"
         update_interval: 5s
         filters:
-        - lambda: return (x / 27.0) * 60.0;
-        unit_of_measurement: "L/hr"
+        - lambda: return (x / 580);
+        
 
 
 
